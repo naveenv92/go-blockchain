@@ -129,7 +129,7 @@ func handleWriteBlock(w http.ResponseWriter, r *http.Request) {
 
 	newBlock, err := generateBlock(Blockchain[len(Blockchain)-1], m.BPM)
 	if err != nil {
-		respondWithJSON(w, r, http.StatusInternalServerError, m)
+		respondWithJSON(w, http.StatusInternalServerError, m)
 		return
 	}
 
